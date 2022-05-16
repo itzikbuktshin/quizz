@@ -3,7 +3,7 @@
 
 @include mat.core();
 
-$marvel-mat-contrast-map: (
+$quizz-mat-contrast-map: (
     50: #000000,
     100: #000000,
     200: #000000,
@@ -20,113 +20,113 @@ $marvel-mat-contrast-map: (
     A700: #ffffff,
 );
 
-$marvel-mat-primary-palette: (
-    100: darken($marvel-primary-color, 1%),
-    200: darken($marvel-primary-color, 2%),
-    300: darken($marvel-primary-color, 3%),
-    400: darken($marvel-primary-color, 4%),
-    500: darken($marvel-primary-color, 5%),
-    600: darken($marvel-primary-color, 6%),
-    700: darken($marvel-primary-color, 7%),
-    800: darken($marvel-primary-color, 8%),
-    900: darken($marvel-primary-color, 9%),
-    contrast: $marvel-mat-contrast-map,
+$quizz-mat-primary-palette: (
+    100: darken($quizz-primary-color, 1%),
+    200: darken($quizz-primary-color, 2%),
+    300: darken($quizz-primary-color, 3%),
+    400: darken($quizz-primary-color, 4%),
+    500: darken($quizz-primary-color, 5%),
+    600: darken($quizz-primary-color, 6%),
+    700: darken($quizz-primary-color, 7%),
+    800: darken($quizz-primary-color, 8%),
+    900: darken($quizz-primary-color, 9%),
+    contrast: $quizz-mat-contrast-map,
 );
 
-$marvel-mat-primary-dark-palette: (
-    100: darken($marvel-primary-dark-color, 1%),
-    200: darken($marvel-primary-dark-color, 2%),
-    300: darken($marvel-primary-dark-color, 3%),
-    400: darken($marvel-primary-dark-color, 4%),
-    500: darken($marvel-primary-dark-color, 5%),
-    600: darken($marvel-primary-dark-color, 6%),
-    700: darken($marvel-primary-dark-color, 7%),
-    800: darken($marvel-primary-dark-color, 8%),
-    900: darken($marvel-primary-dark-color, 9%),
-    contrast: $marvel-mat-contrast-map,
+$quizz-mat-primary-dark-palette: (
+    100: darken($quizz-primary-dark-color, 1%),
+    200: darken($quizz-primary-dark-color, 2%),
+    300: darken($quizz-primary-dark-color, 3%),
+    400: darken($quizz-primary-dark-color, 4%),
+    500: darken($quizz-primary-dark-color, 5%),
+    600: darken($quizz-primary-dark-color, 6%),
+    700: darken($quizz-primary-dark-color, 7%),
+    800: darken($quizz-primary-dark-color, 8%),
+    900: darken($quizz-primary-dark-color, 9%),
+    contrast: $quizz-mat-contrast-map,
 );
 
-$marvel-mat-secondary-palette: (
-    100: darken($marvel-secondary-color, 1%),
-    200: darken($marvel-secondary-color, 2%),
-    300: darken($marvel-secondary-color, 3%),
-    400: darken($marvel-secondary-color, 4%),
-    500: darken($marvel-secondary-color, 5%),
-    600: darken($marvel-secondary-color, 6%),
-    700: darken($marvel-secondary-color, 7%),
-    800: darken($marvel-secondary-color, 8%),
-    900: darken($marvel-secondary-color, 9%),
-    contrast: $marvel-mat-contrast-map,
+$quizz-mat-secondary-palette: (
+    100: darken($quizz-secondary-color, 1%),
+    200: darken($quizz-secondary-color, 2%),
+    300: darken($quizz-secondary-color, 3%),
+    400: darken($quizz-secondary-color, 4%),
+    500: darken($quizz-secondary-color, 5%),
+    600: darken($quizz-secondary-color, 6%),
+    700: darken($quizz-secondary-color, 7%),
+    800: darken($quizz-secondary-color, 8%),
+    900: darken($quizz-secondary-color, 9%),
+    contrast: $quizz-mat-contrast-map,
 );
 
-$marvel-mat-secondary-dark-palette: (
-    100: darken($marvel-secondary-dark-color, 1%),
-    200: darken($marvel-secondary-dark-color, 2%),
-    300: darken($marvel-secondary-dark-color, 3%),
-    400: darken($marvel-secondary-dark-color, 4%),
-    500: darken($marvel-secondary-dark-color, 5%),
-    600: darken($marvel-secondary-dark-color, 6%),
-    700: darken($marvel-secondary-dark-color, 7%),
-    800: darken($marvel-secondary-dark-color, 8%),
-    900: darken($marvel-secondary-dark-color, 9%),
-    contrast: $marvel-mat-contrast-map,
+$quizz-mat-secondary-dark-palette: (
+    100: darken($quizz-secondary-dark-color, 1%),
+    200: darken($quizz-secondary-dark-color, 2%),
+    300: darken($quizz-secondary-dark-color, 3%),
+    400: darken($quizz-secondary-dark-color, 4%),
+    500: darken($quizz-secondary-dark-color, 5%),
+    600: darken($quizz-secondary-dark-color, 6%),
+    700: darken($quizz-secondary-dark-color, 7%),
+    800: darken($quizz-secondary-dark-color, 8%),
+    900: darken($quizz-secondary-dark-color, 9%),
+    contrast: $quizz-mat-contrast-map,
 );
 
-$marvel-mat-warn-palette: (
-    100: darken($marvel-warn-color, 1%),
-    200: darken($marvel-warn-color, 2%),
-    300: darken($marvel-warn-color, 3%),
-    400: darken($marvel-warn-color, 4%),
-    500: darken($marvel-warn-color, 5%),
-    600: darken($marvel-warn-color, 6%),
-    700: darken($marvel-warn-color, 7%),
-    800: darken($marvel-warn-color, 8%),
-    900: darken($marvel-warn-color, 9%),
-    contrast: $marvel-mat-contrast-map,
+$quizz-mat-warn-palette: (
+    100: darken($quizz-warn-color, 1%),
+    200: darken($quizz-warn-color, 2%),
+    300: darken($quizz-warn-color, 3%),
+    400: darken($quizz-warn-color, 4%),
+    500: darken($quizz-warn-color, 5%),
+    600: darken($quizz-warn-color, 6%),
+    700: darken($quizz-warn-color, 7%),
+    800: darken($quizz-warn-color, 8%),
+    900: darken($quizz-warn-color, 9%),
+    contrast: $quizz-mat-contrast-map,
 );
-$marvel-mat-success-palette: (
-    100: darken($marvel-success-color, 1%),
-    200: darken($marvel-success-color, 2%),
-    300: darken($marvel-success-color, 3%),
-    400: darken($marvel-success-color, 4%),
-    500: darken($marvel-success-color, 5%),
-    600: darken($marvel-success-color, 6%),
-    700: darken($marvel-success-color, 7%),
-    800: darken($marvel-success-color, 8%),
-    900: darken($marvel-success-color, 9%),
-    contrast: $marvel-mat-contrast-map,
+$quizz-mat-success-palette: (
+    100: darken($quizz-success-color, 1%),
+    200: darken($quizz-success-color, 2%),
+    300: darken($quizz-success-color, 3%),
+    400: darken($quizz-success-color, 4%),
+    500: darken($quizz-success-color, 5%),
+    600: darken($quizz-success-color, 6%),
+    700: darken($quizz-success-color, 7%),
+    800: darken($quizz-success-color, 8%),
+    900: darken($quizz-success-color, 9%),
+    contrast: $quizz-mat-contrast-map,
 );
 
-$marvel-primary-palette: mat.define-palette($marvel-mat-primary-palette);
-$marvel-primary-dark-palette: mat.define-palette($marvel-mat-primary-dark-palette);
-$marvel-secondary-palette: mat.define-palette($marvel-mat-primary-palette);
-$marvel-secondary-dark-palette: mat.define-palette($marvel-mat-secondary-dark-palette);
-$marvel-warn-palette: mat.define-palette($marvel-mat-warn-palette);
-$marvel-success-palette: mat.define-palette($marvel-mat-success-palette);
+$quizz-primary-palette: mat.define-palette($quizz-mat-primary-palette);
+$quizz-primary-dark-palette: mat.define-palette($quizz-mat-primary-dark-palette);
+$quizz-secondary-palette: mat.define-palette($quizz-mat-primary-palette);
+$quizz-secondary-dark-palette: mat.define-palette($quizz-mat-secondary-dark-palette);
+$quizz-warn-palette: mat.define-palette($quizz-mat-warn-palette);
+$quizz-success-palette: mat.define-palette($quizz-mat-success-palette);
 
-$marvel-mat-light-theme: (
+$quizz-mat-light-theme: (
     color: (
-        primary: $marvel-primary-palette,
-        accent: $marvel-secondary-palette,
-        warn: $marvel-warn-palette,
-        success: $marvel-success-palette,
+        primary: $quizz-primary-palette,
+        accent: $quizz-secondary-palette,
+        warn: $quizz-warn-palette,
+        success: $quizz-success-palette,
     ),
 );
 
-$marvel-mat-dark-theme: (
+$quizz-mat-dark-theme: (
     color: (
-        primary: $marvel-primary-dark-palette,
-        accent: $marvel-secondary-dark-palette,
-        warn: $marvel-warn-palette,
-        success: $marvel-success-palette,
+        primary: $quizz-primary-dark-palette,
+        accent: $quizz-secondary-dark-palette,
+        warn: $quizz-warn-palette,
+        success: $quizz-success-palette,
     ),
 );
 
-$marvel-light-theme: mat.define-light-theme($marvel-mat-light-theme);
-$marvel-dark-theme: mat.define-dark-theme($marvel-mat-dark-theme);
+$quizz-light-theme: mat.define-light-theme($quizz-mat-light-theme);
+$quizz-dark-theme: mat.define-dark-theme($quizz-mat-dark-theme);
 
-@include mat.all-component-themes($marvel-light-theme);
+@include mat.all-component-themes($quizz-light-theme);
 
-.marvel--darkMode {
-    @include mat.all-component-colors($marvel-dark-theme);
+.quizz--darkMode {
+    @include mat.all-component-colors($quizz-dark-theme);
 }

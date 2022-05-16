@@ -8,7 +8,7 @@ const DATE_TIME_CONTROL_VALUE_ACCESSOR: Provider = {
 };
 
 @Component({
-  selector: 'marvel-date-time-input',
+  selector: 'quizz-date-time-input',
   templateUrl: './date-time-input.component.html',
   styleUrls: ['./date-time-input.component.scss'],
   providers: [DATE_TIME_CONTROL_VALUE_ACCESSOR]

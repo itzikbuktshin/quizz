@@ -4,7 +4,7 @@ import { Observable, of } from 'rxjs';
 import { AppService } from 'src/app/app.service';
 
 @Component({
-  selector: 'marvel-header',
+  selector: 'quizz-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })

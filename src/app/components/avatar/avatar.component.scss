@@ -6,7 +6,7 @@
     &__wrapper {
         position: relative;
         @include lSize(100%);
-        background-color: var(--marvel-primary-color);
+        background-color: var(--quizz-primary-color);
         display: flex;
         border-radius: 5px;
         cursor: pointer;
@@ -22,9 +22,9 @@
     }
 
     &__editIcon {
-        --edit-icon-color : var(--marvel-primary-color);
+        --edit-icon-color : var(--quizz-primary-color);
         @include lPadding(toEM(5px));
-        background-color: var(--marvel-accent-color);
+        background-color: var(--quizz-accent-color);
         border-radius: 50%;
         position: absolute;
         right: -10px;

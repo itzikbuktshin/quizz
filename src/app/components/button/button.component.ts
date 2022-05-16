@@ -10,7 +10,7 @@ export interface ButtonConfig {
 }
 
 @Component({
-  selector: 'marvel-button',
+  selector: 'quizz-button',
   changeDetection:ChangeDetectionStrategy.OnPush,
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']

@@ -8,7 +8,7 @@ const TOGGLE_CONTROL_VALUE_ACCESSOR: Provider = {
 };
 
 @Component({
-  selector: 'marvel-toggle-input',
+  selector: 'quizz-toggle-input',
   templateUrl: './toggle-input.component.html',
   styleUrls: ['./toggle-input.component.scss'],
   providers: [TOGGLE_CONTROL_VALUE_ACCESSOR]

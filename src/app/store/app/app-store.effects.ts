@@ -18,7 +18,7 @@ export class AppEffects {
     init$ = createEffect(() => this.actions$.pipe(
         ofType(ROOT_EFFECTS_INIT),
         map(() => {
-            const darkModeString = localStorage.getItem(LocalStorageConstantce.MARVEL_DARK_MODE_THEME) || 'false';
+            const darkModeString = localStorage.getItem(LocalStorageConstantce.quizz_DARK_MODE_THEME) || 'false';
             const darkMode = JSON.parse(darkModeString);
             const theme = darkMode ? Theme.DARK : Theme.DEFAULT;
             return { darkMode, theme };
@@ -35,7 +35,7 @@ export class AppEffects {
         map(([, darkMode]) => darkMode),
         tap((darkMode: boolean) => {
             const theme = darkMode ? Theme.DEFAULT : Theme.DARK;
-            localStorage.setItem(LocalStorageConstantce.MARVEL_DARK_MODE_THEME, `${!darkMode}`);
+            localStorage.setItem(LocalStorageConstantce.quizz_DARK_MODE_THEME, `${!darkMode}`);
             this.themeService.changeTheme(theme);
         }),
         map((darkMode: boolean) => appActions.toggleDarkModeSuccess({ darkMode: !darkMode }))

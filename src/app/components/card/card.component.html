@@ -1,10 +1,10 @@
-<nb-card class="marvel-card">
+<nb-card class="quizz-card">
     <nb-card-header [style.display]="header ? 'block' : 'none'">
         <ng-content select="[card-header]"></ng-content>
     </nb-card-header>
-    <nb-card-body class="marvel-card__body" [class.marvel-card__body--withoutPadding]="!padding">
+    <nb-card-body class="quizz-card__body" [class.quizz-card__body--withoutPadding]="!padding">
         <div [style.display]="loading ? 'block' : 'none'">
-            <marvel-loading></marvel-loading>
+            <quizz-loading></quizz-loading>
         </div>
         <ng-content select="[card-body]"></ng-content>    
     </nb-card-body>

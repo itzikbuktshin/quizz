@@ -22,7 +22,7 @@ const TEXT_CONTROL_VALUE_ACCESSOR: Provider = {
 };
 
 @Component({
-  selector: 'marvel-text-input',
+  selector: 'quizz-text-input',
   templateUrl: './text-input.component.html',
   styleUrls: ['./text-input.component.scss'],
   providers: [TEXT_CONTROL_VALUE_ACCESSOR]

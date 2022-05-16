@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'marvel-loading',
+  selector: 'quizz-loading',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `<div class="spinner invert">
     <div class="double-bounce1"></div>

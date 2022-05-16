@@ -23,12 +23,12 @@
 }
 
 :root {
-  --marvel-primary-color: #{$marvel-primary-color};
-  --marvel-secondary-color: #{$marvel-secondary-color};
-  --marvel-accent-color:  #{$marvel-secondary-color};
-  --marvel-background-color:  #{$marvel-background-color};
-  --marvel-background-color-1:  #{$marvel-background-color-1};
-  --marvel-loader-color: #{$marvel-primary-color};
+  --quizz-primary-color: #{$quizz-primary-color};
+  --quizz-secondary-color: #{$quizz-secondary-color};
+  --quizz-accent-color:  #{$quizz-secondary-color};
+  --quizz-background-color:  #{$quizz-background-color};
+  --quizz-background-color-1:  #{$quizz-background-color-1};
+  --quizz-loader-color: #{$quizz-primary-color};
 }
 
 html,
@@ -45,12 +45,12 @@ body {
   letter-spacing: normal;
   overflow-x: hidden;
 
-  &.marvel--darkMode {
-    --marvel-primary-color: #{$marvel-primary-dark-color};
-    --marvel-secondary-color: #{$marvel-secondary-dark-color};
-    --marvel-accent-color:  #{$marvel-accent-color};
-    --marvel-background-color:  #{$marvel-dark-background-color};
-    --marvel-background-color-1:  #{$marvel-dark-background-color-1};
-    --marvel-loader-color: #{$marvel-secondary-color};
+  &.quizz--darkMode {
+    --quizz-primary-color: #{$quizz-primary-dark-color};
+    --quizz-secondary-color: #{$quizz-secondary-dark-color};
+    --quizz-accent-color:  #{$quizz-accent-color};
+    --quizz-background-color:  #{$quizz-dark-background-color};
+    --quizz-background-color-1:  #{$quizz-dark-background-color-1};
+    --quizz-loader-color: #{$quizz-secondary-color};
   }
 }

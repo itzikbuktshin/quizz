@@ -3,7 +3,7 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 import { Router } from '@angular/router';
  
 @Component({
-  selector: 'marvel-breadcrumb',
+  selector: 'quizz-breadcrumb',
   templateUrl: './breadcrumb.component.html',
   styleUrls: ['./breadcrumb.component.scss'],
   providers: [Location, { provide: LocationStrategy, useClass: PathLocationStrategy }],

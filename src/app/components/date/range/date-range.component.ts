@@ -12,7 +12,7 @@ const DATE_RANGE_CONTROL_VALUE_ACCESSOR: Provider = {
 };
 
 @Component({
-  selector: 'marvel-date-range',
+  selector: 'quizz-date-range',
   templateUrl: './date-range.component.html',
   styleUrls: ['./date-range.component.scss'],
   providers: [DATE_RANGE_CONTROL_VALUE_ACCESSOR]

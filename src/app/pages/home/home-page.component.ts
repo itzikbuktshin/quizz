@@ -1,18 +1,18 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'marvel-home-page',
+  selector: 'quizz-home-page',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  template:`<marvel-main-page-layout>
+  template:`<quizz-main-page-layout>
     <div header>
-        <marvel-header></marvel-header>
+        <quizz-header></quizz-header>
     </div>
     <div menu>
-        <marvel-menu></marvel-menu>
+        <quizz-menu></quizz-menu>
     </div>
     <div content>
         <p>Home</p>
     </div>
-  </marvel-main-page-layout>`
+  </quizz-main-page-layout>`
 })
 export class HomePageComponent {}

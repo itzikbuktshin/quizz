@@ -20,16 +20,16 @@ $nb-theme: (
   @return $palette;
 }
  
-$marvel-nb-success-palette: generateNbColorPalette("color-success", $marvel-success-color);
-$marvel-nb-warn-palette: generateNbColorPalette("color-warning", $marvel-warn-color);
+$quizz-nb-success-palette: generateNbColorPalette("color-success", $quizz-success-color);
+$quizz-nb-warn-palette: generateNbColorPalette("color-warning", $quizz-warn-color);
 
-$marvel-nb-default-palette: generateNbColorPalette("color-primary", $marvel-primary-color);
-$marvel-nb-dark-palette: generateNbColorPalette("color-primary", $marvel-primary-dark-color);
+$quizz-nb-default-palette: generateNbColorPalette("color-primary", $quizz-primary-color);
+$quizz-nb-dark-palette: generateNbColorPalette("color-primary", $quizz-primary-dark-color);
 
-$marvel-nb-theme: map.merge(map.merge($nb-theme, $marvel-nb-warn-palette),$marvel-nb-success-palette);
+$quizz-nb-theme: map.merge(map.merge($nb-theme, $quizz-nb-warn-palette),$quizz-nb-success-palette);
 
-$nb-themes: nb-register-theme(map.merge($marvel-nb-theme, $marvel-nb-default-palette), default, default);
-$nb-themes: nb-register-theme(map.merge($marvel-nb-theme, $marvel-nb-dark-palette), dark, dark);
+$nb-themes: nb-register-theme(map.merge($quizz-nb-theme, $quizz-nb-default-palette), default, default);
+$nb-themes: nb-register-theme(map.merge($quizz-nb-theme, $quizz-nb-dark-palette), dark, dark);
 
 @include nb-install() {
   @include nb-theme-global();

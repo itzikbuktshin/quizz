@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'marvel-main-page-layout',
+  selector: 'quizz-main-page-layout',
   template:`<nb-layout>    
     <nb-layout-header fixed *ngIf="withHeader">
         <div class="w-100">
@@ -15,7 +15,7 @@ import { Component, Input } from '@angular/core';
 
     <nb-layout-column>
         <div class="my-3">
-          <marvel-breadcrumb></marvel-breadcrumb>
+          <quizz-breadcrumb></quizz-breadcrumb>
         </div>
         <ng-content select="[content]"></ng-content>
     </nb-layout-column>

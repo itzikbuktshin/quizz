@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'marvel-card',
+  selector: 'quizz-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })

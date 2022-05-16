@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component} from '@angular/core';
 
 @Component({
-  selector: 'marvel-edit-icon',
+  selector: 'quizz-edit-icon',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template:`<svg xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 24 24">

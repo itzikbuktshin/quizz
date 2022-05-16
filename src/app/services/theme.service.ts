@@ -22,10 +22,10 @@ export class ThemeService {
   changeTheme(theme: Theme) {
     this.nbThemeService.changeTheme(theme);
     if(theme === Theme.DARK){
-      document.body.classList.add('marvel--darkMode')
+      document.body.classList.add('quizz--darkMode')
     }
     else if(theme === Theme.DEFAULT){
-      document.body.classList.remove('marvel--darkMode');
+      document.body.classList.remove('quizz--darkMode');
     }
   }
 }

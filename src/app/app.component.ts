@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'marvel-root',
-  template: `<marvel-blank-page-layout>
+  selector: 'quizz-root',
+  template: `<quizz-blank-page-layout>
     <ng-container content>
         <router-outlet></router-outlet>
     </ng-container>
-  </marvel-blank-page-layout>`
+  </quizz-blank-page-layout>`
 })
 export class AppComponent {
-  title = 'marvel';
+  title = 'quizz';
 }

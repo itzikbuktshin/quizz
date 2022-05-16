@@ -11,7 +11,7 @@ export type TableColumn = {
   type?: TableColumnType
 }
 @Component({
-  selector: 'marvel-table',
+  selector: 'quizz-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss']
 })

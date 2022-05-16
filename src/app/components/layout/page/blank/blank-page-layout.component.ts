@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component} from '@angular/core';
 
 @Component({
-  selector: 'marvel-blank-page-layout',
+  selector: 'quizz-blank-page-layout',
   template:`
   <nb-layout>
     <nb-layout-column class="p-0">

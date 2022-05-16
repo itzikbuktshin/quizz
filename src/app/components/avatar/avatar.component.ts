@@ -4,7 +4,7 @@ import { fadeInOutAnimationFunc } from '../animations/angular.animations';
 export type AvatarShape = 'rectangle' | 'circle';
 
 @Component({
-  selector: 'marvel-avatar',
+  selector: 'quizz-avatar',
   templateUrl: './avatar.component.html',
   animations: [fadeInOutAnimationFunc('fadeInOutTrigger', 100)],
   styleUrls: ['./avatar.component.scss']

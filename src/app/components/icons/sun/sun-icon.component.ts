@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'marvel-sun-icon',
+  selector: 'quizz-sun-icon',
   template: `
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="eva eva-sun-outline"
       fill="currentColor">
