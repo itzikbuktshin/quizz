@@ -1,0 +1,241 @@
+@use "sass:math";
+@import '../../variables';
+
+@mixin scale($arg) {
+    transform: scale($arg)
+}
+
+@mixin size($width, $height:$width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin oval($width:100px, $height:100px) {
+    min-width: $width;
+    min-height: $height;
+    max-height: $height;
+    border-radius: 99999px;
+}
+
+
+@mixin ng-icon() {
+    :host {
+        height: 100%;
+        width: 100%;
+        display: flex;
+
+        svg {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+}
+
+@function bgDarken($color, $amount) {
+    @return linear-gradient(to top,
+        rgba(0, 0, 0, $amount),
+        rgba(0, 0, 0, $amount)) var(#{$color});
+}
+
+
+@function toEM($pixels, $font-size:$font-size) {
+    $font-size: $font-size + 0px;
+    $rem: math.div($pixels, $font-size);
+    @return #{$rem}em;
+}
+
+@function toREM($pixels, $font-size:$font-size) {
+    $font-size: $font-size + 0px;
+    $rem: math.div($pixels, $font-size);
+    @return #{$rem}rem;
+}
+
+@mixin createVariable ($name, $value, $nameSpace:'marvel') {
+    --#{$nameSpace+$name}: #{$value};
+}
+
+@mixin createColorClass ($colorName, $color, $nameSpace:'marvel') {
+    $stylesMap:(
+        "": "color",
+        "Background":"background-color",
+        "Fill":"fill");
+
+    @each $key,
+    $value in $stylesMap {
+        .#{$nameSpace+$key+$colorName} { 
+            #{$value}:var(--#{$nameSpace+$colorName});
+        }
+    }
+}
+
+
+@mixin lWidth($val) {
+    width: $val;
+    inline-size: $val;
+}
+
+@mixin lMaxWidth($val) {
+    max-width: $val;
+    max-inline-size: $val;
+}
+
+@mixin lMinWidth($val) {
+    min-width: $val;
+    min-inline-size: $val;
+}
+
+// block-size
+@mixin lHeight($val) {
+    height: $val;
+    block-size: $val;
+}
+
+@mixin lMaxHeight($val) {
+    max-height: $val;
+    max-block-size: $val;
+}
+
+@mixin lMinHeight($val) {
+    min-height: $val;
+    min-block-size: $val;
+}
+
+// size
+@mixin lSize($inline, $block:$inline) {
+    @include lWidth(($inline));
+    @include lHeight(($block));
+}
+
+// border
+@mixin lBorderTop($args) {
+    border-top: $args;
+    // safari issue
+    // border-block-start: $args;
+}
+
+@mixin lBorderBottom($args) {
+    border-bottom: $args;
+    // safari issue
+    // border-block-end: $args;
+}
+
+@mixin lBorderLeft($args) {
+    border-left: $args;
+    // safari issue
+    // border-inline-start: $args;
+}
+
+
+@mixin lBorderRight($args) {
+    border-right: $args;
+    // safari issue
+    // border-inline-end: $args;
+}
+
+
+@mixin lBorder($args) {
+    @include lBorderTop($args);
+    @include lBorderRight($args);
+    @include lBorderBottom($args);
+    @include lBorderLeft($args);
+}
+
+// margin
+@mixin lMargin($t, $r:$t, $b:$t, $l:$t) {
+    @include lMarginT($t);
+    @include lMarginR($r);
+    @include lMarginB($b);
+    @include lMarginL($l);
+}
+
+@mixin lMarginT($arg) {
+    margin-top: $arg;
+    margin-block-start: $arg;
+}
+
+@mixin lMarginB($arg) {
+    margin-bottom: $arg;
+    margin-block-end: $arg;
+}
+
+@mixin lMarginY($arg) {
+    margin-top: $arg;
+    margin-bottom: $arg;
+    margin-block-start: $arg;
+    margin-block-end: $arg;
+}
+
+@mixin lMarginL($arg) {
+    margin-left: $arg;
+    margin-inline-start: $arg;
+}
+
+@mixin lMarginR($arg) {
+    margin-right: $arg;
+    margin-inline-end: $arg;
+}
+
+@mixin lMarginX($arg) {
+    @include lMarginL($arg);
+    @include lMarginR($arg);
+}
+
+
+
+// padding
+@mixin lPaddingT($arg) {
+    padding-top: $arg;
+    padding-block-start: $arg;
+}
+
+@mixin lPaddingB($arg) {
+    padding-bottom: $arg;
+    padding-block-end: $arg;
+}
+
+@mixin lPaddingL($arg) {
+    padding-left: $arg;
+    padding-inline-start: $arg;
+}
+
+@mixin lPaddingR($arg) {
+    padding-right: $arg;
+    padding-inline-end: $arg;
+}
+
+@mixin lPaddingY($top,$bottom:$top) {
+    @include lPaddingT($top);
+    @include lPaddingB($bottom);
+}
+
+@mixin lPaddingX($right,$left:$right) {
+    @include lPaddingR($right);
+    @include lPaddingL($left);
+}
+
+@mixin lPadding($top,$right:$top,$bottom:$top,$left:$right) {
+    @include lPaddingY($top,$bottom);
+    @include lPaddingX($left,$right);
+
+}
+
+// transitions
+
+@mixin transition($arg:200ms ease) {
+    transition: $arg;
+}
+
+@mixin transitionWillChange($willChange, $arg:200ms ease) {
+    @include transition($arg);
+    will-change: unquote($willChange);
+}
+
+// inputs
+@mixin autocompleteFillStyle {
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+        box-shadow: 0 0 0 100px var(--marvelGray--2) inset;
+    }
+}

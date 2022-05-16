@@ -1,0 +1,6 @@
+<mat-form-field appearance="outline" class="w-100">
+  <mat-label>{{label}}</mat-label>
+  <input [disabled]="disabled" matInput [value]="date" (dateChange)="setDate($event)" [matDatepicker]="datepicker">
+  <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+  <mat-datepicker panelClass="marvelDatePicker__panel" #datepicker></mat-datepicker>
+</mat-form-field>

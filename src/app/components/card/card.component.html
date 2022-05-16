@@ -1,0 +1,11 @@
+<nb-card class="marvel-card">
+    <nb-card-header [style.display]="header ? 'block' : 'none'">
+        <ng-content select="[card-header]"></ng-content>
+    </nb-card-header>
+    <nb-card-body class="marvel-card__body" [class.marvel-card__body--withoutPadding]="!padding">
+        <div [style.display]="loading ? 'block' : 'none'">
+            <marvel-loading></marvel-loading>
+        </div>
+        <ng-content select="[card-body]"></ng-content>    
+    </nb-card-body>
+</nb-card>

@@ -1,0 +1,7 @@
+.marvel-card {
+    &__body {
+        &--withoutPadding {
+            padding: 0px !important;
+        }
+    }
+}

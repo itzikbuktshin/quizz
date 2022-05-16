@@ -1,0 +1,22 @@
+<div class="headerComponent">    
+    <div class="headerComponent__sideNavButton" (click)="toggleSideNav()">
+        <marvel-humburger-icon></marvel-humburger-icon>
+    </div>
+    <div class="headerComponent__seperator">
+    </div>
+    <div class="flex-grow-1">
+        <span>
+            Marvel priryteam
+        </span>
+    </div>
+    <div class="headerComponent__themeButton">
+        <div class="headerComponent__themeButtonIcon">
+            <marvel-sun-icon *ngIf="!(darkMode$ | async)"></marvel-sun-icon>
+            <marvel-moon-icon *ngIf="darkMode$ | async"></marvel-moon-icon>
+        </div>
+        <marvel-toggle-input (checkedChange)="changeTheme()" [checked]="(darkMode$ | async) || false"></marvel-toggle-input>
+    </div>
+    <div class="headerComponent__userAvatar">
+        <marvel-avatar [editIconSize]="25" [fontSize]="20"></marvel-avatar>
+    </div>
+</div>

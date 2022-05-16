@@ -1,0 +1,16 @@
+<div class="textInputComponent">
+    <mat-form-field class="w-100" appearance="outline">
+        <mat-label>{{label}}</mat-label>
+        <input [errorStateMatcher]="errorMatcher()"
+               [disabled]="disabled"
+               [value]="text"
+               type="text"
+               (change)="updateText($event)"
+               matInput
+               #input="matInput"
+               autocomplete="off">
+        <mat-error *ngFor="let error of control?.errors | keyvalue">
+            {{errors && errors[error.key]}}
+        </mat-error>
+    </mat-form-field>
+</div>

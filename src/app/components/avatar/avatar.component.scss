@@ -1,0 +1,40 @@
+@import "mixins";
+
+.avatarComponent {
+    @include lSize(100%);
+    
+    &__wrapper {
+        position: relative;
+        @include lSize(100%);
+        background-color: var(--marvel-primary-color);
+        display: flex;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    &__defaultImage {
+        color: white;
+        margin: auto;
+    }
+
+    &--circle {
+        border-radius: 50%;
+    }
+
+    &__editIcon {
+        --edit-icon-color : var(--marvel-primary-color);
+        @include lPadding(toEM(5px));
+        background-color: var(--marvel-accent-color);
+        border-radius: 50%;
+        position: absolute;
+        right: -10px;
+        top: -10px;
+
+        &--hidden {
+            transition: all .25s ease-out;
+            padding: 0px !important;
+            width: 0px !important;
+            height: 0px !important;
+        }
+    }
+}

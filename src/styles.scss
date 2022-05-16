@@ -1,0 +1,56 @@
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+@import '_themes.scss';
+@import '_overrides.scss';
+@import '_variables';
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("/assets/fonts/Helvetica.woff2") format("woff2"), url("/assets/fonts/Helvetica.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("/assets/fonts/Helvetica-Bold.woff2") format("woff2"),
+    url("/assets/fonts/Helvetica-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --marvel-primary-color: #{$marvel-primary-color};
+  --marvel-secondary-color: #{$marvel-secondary-color};
+  --marvel-accent-color:  #{$marvel-secondary-color};
+  --marvel-background-color:  #{$marvel-background-color};
+  --marvel-background-color-1:  #{$marvel-background-color-1};
+  --marvel-loader-color: #{$marvel-primary-color};
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-size: $font-size;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  overflow-x: hidden;
+
+  &.marvel--darkMode {
+    --marvel-primary-color: #{$marvel-primary-dark-color};
+    --marvel-secondary-color: #{$marvel-secondary-dark-color};
+    --marvel-accent-color:  #{$marvel-accent-color};
+    --marvel-background-color:  #{$marvel-dark-background-color};
+    --marvel-background-color-1:  #{$marvel-dark-background-color-1};
+    --marvel-loader-color: #{$marvel-secondary-color};
+  }
+}

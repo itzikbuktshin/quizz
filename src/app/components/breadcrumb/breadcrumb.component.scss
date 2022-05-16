@@ -1,0 +1,14 @@
+@import 'mixins';
+
+.breadcrumbComponent {
+    &__item {
+        font-size: toREM(16px);
+
+        &:hover{
+            transition: color 0.5s ease;
+            color: var(--marvel-primary-color);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}

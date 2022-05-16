@@ -1,0 +1,15 @@
+@import "mixins";
+
+.tableComponent {
+    @include lWidth(100%);
+    background-color: var(--marvel-background-color);
+
+    &__row {
+        &:hover {
+            cursor: pointer;
+            background: var(--marvel-background-color-1);
+            border-color: var(--marvel-background-color-1);
+            color: var(--text-basic-color);
+        }
+    }
+}

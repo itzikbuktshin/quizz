@@ -1,0 +1,36 @@
+@use "sass:map";
+
+@import "~@nebular/theme/styles/theming";
+@import "~@nebular/theme/styles/themes/default";
+@import "~@nebular/theme/styles/themes/dark";
+@import "~@nebular/theme/styles/globals";
+@import "variables";
+
+$nb-theme: (
+  font-family-primary: $font-family,
+  font-family-secondary: $font-family,
+  text-font-size: $font-size
+);
+
+@function generateNbColorPalette($nb-color-name, $color) {
+  $palette: ();
+  @each $contrast, $percentage in $color-contrasts {
+    $palette: map.set($palette, "#{$nb-color-name}-#{$contrast}00", darken($color, $percentage));
+  }
+  @return $palette;
+}
+ 
+$marvel-nb-success-palette: generateNbColorPalette("color-success", $marvel-success-color);
+$marvel-nb-warn-palette: generateNbColorPalette("color-warning", $marvel-warn-color);
+
+$marvel-nb-default-palette: generateNbColorPalette("color-primary", $marvel-primary-color);
+$marvel-nb-dark-palette: generateNbColorPalette("color-primary", $marvel-primary-dark-color);
+
+$marvel-nb-theme: map.merge(map.merge($nb-theme, $marvel-nb-warn-palette),$marvel-nb-success-palette);
+
+$nb-themes: nb-register-theme(map.merge($marvel-nb-theme, $marvel-nb-default-palette), default, default);
+$nb-themes: nb-register-theme(map.merge($marvel-nb-theme, $marvel-nb-dark-palette), dark, dark);
+
+@include nb-install() {
+  @include nb-theme-global();
+}

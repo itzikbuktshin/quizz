@@ -1,0 +1,11 @@
+<div class="w-100 buttonComponent">
+    <button nbButton
+            class="w-100"
+            matRipple
+            size="medium"
+            (click)="config?.click()"
+            [shape]="config?.shape || shape"
+            [status]="config?.color || color">
+    <ng-content></ng-content>
+    </button>
+</div>
