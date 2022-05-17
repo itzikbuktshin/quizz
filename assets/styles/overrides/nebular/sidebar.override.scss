@@ -1,0 +1,13 @@
+nb-sidebar {
+  nb-menu {
+    margin: 0 -1.25rem -1.25rem;
+  }
+}
+nb-sidebar,
+nb-sidebar > div.main-container {
+  transition: width 0.75s;
+}
+
+.nb-theme-default nb-sidebar nb-menu {
+  margin: 0 -1.25rem -1.25rem;
+}

@@ -1,0 +1,132 @@
+@use "sass:map";
+@use "~@angular/material" as mat;
+
+@include mat.core();
+
+$quizz-mat-contrast-map: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff,
+);
+
+$quizz-mat-primary-palette: (
+    100: darken($quizz-primary-color, 1%),
+    200: darken($quizz-primary-color, 2%),
+    300: darken($quizz-primary-color, 3%),
+    400: darken($quizz-primary-color, 4%),
+    500: darken($quizz-primary-color, 5%),
+    600: darken($quizz-primary-color, 6%),
+    700: darken($quizz-primary-color, 7%),
+    800: darken($quizz-primary-color, 8%),
+    900: darken($quizz-primary-color, 9%),
+    contrast: $quizz-mat-contrast-map,
+);
+
+$quizz-mat-primary-dark-palette: (
+    100: darken($quizz-primary-dark-color, 1%),
+    200: darken($quizz-primary-dark-color, 2%),
+    300: darken($quizz-primary-dark-color, 3%),
+    400: darken($quizz-primary-dark-color, 4%),
+    500: darken($quizz-primary-dark-color, 5%),
+    600: darken($quizz-primary-dark-color, 6%),
+    700: darken($quizz-primary-dark-color, 7%),
+    800: darken($quizz-primary-dark-color, 8%),
+    900: darken($quizz-primary-dark-color, 9%),
+    contrast: $quizz-mat-contrast-map,
+);
+
+$quizz-mat-secondary-palette: (
+    100: darken($quizz-secondary-color, 1%),
+    200: darken($quizz-secondary-color, 2%),
+    300: darken($quizz-secondary-color, 3%),
+    400: darken($quizz-secondary-color, 4%),
+    500: darken($quizz-secondary-color, 5%),
+    600: darken($quizz-secondary-color, 6%),
+    700: darken($quizz-secondary-color, 7%),
+    800: darken($quizz-secondary-color, 8%),
+    900: darken($quizz-secondary-color, 9%),
+    contrast: $quizz-mat-contrast-map,
+);
+
+$quizz-mat-secondary-dark-palette: (
+    100: darken($quizz-secondary-dark-color, 1%),
+    200: darken($quizz-secondary-dark-color, 2%),
+    300: darken($quizz-secondary-dark-color, 3%),
+    400: darken($quizz-secondary-dark-color, 4%),
+    500: darken($quizz-secondary-dark-color, 5%),
+    600: darken($quizz-secondary-dark-color, 6%),
+    700: darken($quizz-secondary-dark-color, 7%),
+    800: darken($quizz-secondary-dark-color, 8%),
+    900: darken($quizz-secondary-dark-color, 9%),
+    contrast: $quizz-mat-contrast-map,
+);
+
+$quizz-mat-warn-palette: (
+    100: darken($quizz-warn-color, 1%),
+    200: darken($quizz-warn-color, 2%),
+    300: darken($quizz-warn-color, 3%),
+    400: darken($quizz-warn-color, 4%),
+    500: darken($quizz-warn-color, 5%),
+    600: darken($quizz-warn-color, 6%),
+    700: darken($quizz-warn-color, 7%),
+    800: darken($quizz-warn-color, 8%),
+    900: darken($quizz-warn-color, 9%),
+    contrast: $quizz-mat-contrast-map,
+);
+$quizz-mat-success-palette: (
+    100: darken($quizz-success-color, 1%),
+    200: darken($quizz-success-color, 2%),
+    300: darken($quizz-success-color, 3%),
+    400: darken($quizz-success-color, 4%),
+    500: darken($quizz-success-color, 5%),
+    600: darken($quizz-success-color, 6%),
+    700: darken($quizz-success-color, 7%),
+    800: darken($quizz-success-color, 8%),
+    900: darken($quizz-success-color, 9%),
+    contrast: $quizz-mat-contrast-map,
+);
+
+$quizz-primary-palette: mat.define-palette($quizz-mat-primary-palette);
+$quizz-primary-dark-palette: mat.define-palette($quizz-mat-primary-dark-palette);
+$quizz-secondary-palette: mat.define-palette($quizz-mat-primary-palette);
+$quizz-secondary-dark-palette: mat.define-palette($quizz-mat-secondary-dark-palette);
+$quizz-warn-palette: mat.define-palette($quizz-mat-warn-palette);
+$quizz-success-palette: mat.define-palette($quizz-mat-success-palette);
+
+$quizz-mat-light-theme: (
+    color: (
+        primary: $quizz-primary-palette,
+        accent: $quizz-secondary-palette,
+        warn: $quizz-warn-palette,
+        success: $quizz-success-palette,
+    ),
+);
+
+$quizz-mat-dark-theme: (
+    color: (
+        primary: $quizz-primary-dark-palette,
+        accent: $quizz-secondary-dark-palette,
+        warn: $quizz-warn-palette,
+        success: $quizz-success-palette,
+    ),
+);
+
+$quizz-light-theme: mat.define-light-theme($quizz-mat-light-theme);
+$quizz-dark-theme: mat.define-dark-theme($quizz-mat-dark-theme);
+
+@include mat.all-component-themes($quizz-light-theme);
+
+.quizz--darkMode {
+    @include mat.all-component-colors($quizz-dark-theme);
+}

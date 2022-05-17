@@ -1,0 +1,36 @@
+@use "sass:map";
+
+@import "~@nebular/theme/styles/theming";
+@import "~@nebular/theme/styles/themes/default";
+@import "~@nebular/theme/styles/themes/dark";
+@import "~@nebular/theme/styles/globals";
+@import "variables";
+
+$nb-theme: (
+  font-family-primary: $font-family,
+  font-family-secondary: $font-family,
+  text-font-size: $font-size
+);
+
+@function generateNbColorPalette($nb-color-name, $color) {
+  $palette: ();
+  @each $contrast, $percentage in $color-contrasts {
+    $palette: map.set($palette, "#{$nb-color-name}-#{$contrast}00", darken($color, $percentage));
+  }
+  @return $palette;
+}
+ 
+$quizz-nb-success-palette: generateNbColorPalette("color-success", $quizz-success-color);
+$quizz-nb-warn-palette: generateNbColorPalette("color-warning", $quizz-warn-color);
+
+$quizz-nb-default-palette: generateNbColorPalette("color-primary", $quizz-primary-color);
+$quizz-nb-dark-palette: generateNbColorPalette("color-primary", $quizz-primary-dark-color);
+
+$quizz-nb-theme: map.merge(map.merge($nb-theme, $quizz-nb-warn-palette),$quizz-nb-success-palette);
+
+$nb-themes: nb-register-theme(map.merge($quizz-nb-theme, $quizz-nb-default-palette), default, default);
+$nb-themes: nb-register-theme(map.merge($quizz-nb-theme, $quizz-nb-dark-palette), dark, dark);
+
+@include nb-install() {
+  @include nb-theme-global();
+}
