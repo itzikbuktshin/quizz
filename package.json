@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --aot=false --build-optimizer=false --deployUrl=/dist/",
+    "build": "ng build --aot=true --base-href=/quizz/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
