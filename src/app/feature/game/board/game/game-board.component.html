@@ -1,0 +1,17 @@
+<quizz-blank-page-layout>
+    <ng-container content>
+        <div class="gameBoard">
+            <div class="gameBoard__header">
+                <quizz-game-header [currentQuestion]="totalAnswers$ | async" [points]="points$ | async"
+                    [lives]="lives$ | async">
+                </quizz-game-header>
+                <quizz-progress-bar [value]="timeLeft"></quizz-progress-bar>
+            </div>
+            <div class="gameBoard__game">
+                <quizz-game [currentQuestion]="totalAnswers$ | async" [timeLeft]="timeLeft"
+                    (onAnswer)="answerQuestion($event)" [question]="question$ | async">
+                </quizz-game>
+            </div>
+        </div>
+    </ng-container>
+</quizz-blank-page-layout>

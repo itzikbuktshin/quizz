@@ -1,24 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePageComponent } from './pages/home/home-page.component';
-import { PagesModule } from './pages/pages.module';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'game',
     pathMatch: 'full'
   },
   {
-    path: 'home',
-    component: HomePageComponent
+    path: 'game',
+    loadChildren: () => import('./feature/game/game.module').then(m => m.GameModule)
   }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes),
-    PagesModule
+    RouterModule.forRoot(routes)
   ],
   exports: [RouterModule]
 })

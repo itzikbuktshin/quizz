@@ -1,16 +1,14 @@
-<div class="textInputComponent">
-    <mat-form-field class="w-100" appearance="outline">
+<div class="w-100">
+    <mat-form-field class="w-100 textInput" appearance="outline">
         <mat-label>{{label}}</mat-label>
-        <input [errorStateMatcher]="errorMatcher()"
-               [disabled]="disabled"
-               [value]="text"
-               type="text"
-               (change)="updateText($event)"
-               matInput
-               #input="matInput"
-               autocomplete="off">
-        <mat-error *ngFor="let error of control?.errors | keyvalue">
-            {{errors && errors[error.key]}}
+        <input [errorStateMatcher]="matcher()" [disabled]="disabled" [value]="text" [placeholder]="placeholder || ''"
+            [required]="required" [formControl]="formControl" (change)="updateText($event)" matInput #input="matInput"
+            (blur)="onTouched($event)" autocomplete="off">
+        <mat-error *ngIf="control?.errors">
+            <ng-content select="[error]"></ng-content>
         </mat-error>
+        <div matSuffix class="textInput__icon" [class.textInput__icon--warn]="control?.errors && control?.touched">
+            <ng-content select="[icon]"></ng-content>
+        </div>
     </mat-form-field>
 </div>

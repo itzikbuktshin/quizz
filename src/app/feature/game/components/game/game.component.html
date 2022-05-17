@@ -1,0 +1,26 @@
+<div class="game">
+    <ng-container *ngIf="question">
+        <div class="game__header">
+            <span>Q{{(currentQuestion ?? 1) + 1}}</span>
+            <div class="w-75" [innerHTML]="question?.question"></div>
+            <div>{{timeLeft / 5 | number : '1.0-0'}} sec</div>
+        </div>
+
+        <div class="game__body">
+            <div class="game__answer" *ngFor="let answer of question?.answers; let i=index">
+                <div class="game__answerWrapper" (click)="selecteAnswer(i)"
+                    [class.game__answerWrapper--selected]="selectedAnswer === i">
+                    <span [innerHTML]="answer"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game__actions" (click)="answerQuestion()">
+            <quizz-button [disabled]="selectedAnswer === null">Ok</quizz-button>
+        </div>
+    </ng-container>
+
+    <div class="game__loader" *ngIf="!question">
+        <quizz-loading></quizz-loading>
+    </div>
+</div>

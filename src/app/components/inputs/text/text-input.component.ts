@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, forwardRef, Injector, Input, Provider, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, forwardRef, HostBinding, Injector, Input, Provider, ViewChild } from '@angular/core';
 import { ControlValueAccessor, FormControl, NgControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { MatInput } from '@angular/material/input';
@@ -29,26 +29,29 @@ const TEXT_CONTROL_VALUE_ACCESSOR: Provider = {
 })
 export class TextInputComponent implements ControlValueAccessor, AfterViewInit {
 
+  static nextId = 0;
   onChange: any = () => { };
   onTouched: any = () => { };
 
   @Input() border: boolean = true;
-  @Input() label: string = '';
+  @Input() label: string |undefined;
   @Input() disabled: boolean = false;
   @Input() transparent: boolean = false;
-  @Input() placeholder: string = '';
-  @Input() errors: InputError = {};
-
-  text: string = '';
-
-  @ViewChild('input')
+  @Input() placeholder: string | undefined;
+  @Input() required: boolean = false;
+  
   //@ts-ignore
-  input: MatInput;
-
+  @ViewChild('input') input: MatInput;
+  @HostBinding() id = `quizz-text-input-${TextInputComponent.nextId++}`;
+  text: string = '';
+  formControl = new FormControl('');
   constructor(public injector: Injector) { }
 
   //@ts-ignore
   control: FormControl;
+  matcher() {
+    return new InputErrorMatcher(this.control);
+  }
 
   ngAfterViewInit(): void {
     const ngControl = this.injector.get(NgControl, null);
@@ -60,6 +63,7 @@ export class TextInputComponent implements ControlValueAccessor, AfterViewInit {
 
   writeValue(text: string): void {
     this.text = text;
+    this.formControl.setValue(this.text, {emitEvent: false})
   }
   registerOnChange(fn: any): void {
     this.onChange = fn;
@@ -75,9 +79,6 @@ export class TextInputComponent implements ControlValueAccessor, AfterViewInit {
     this.text = value;
     this.onTouched();
     this.onChange(this.text);
-    this.input?.updateErrorState()
-  }
-  errorMatcher() {
-    return new InputErrorMatcher(this.control)
+    this.input?.updateErrorState();
   }
 }

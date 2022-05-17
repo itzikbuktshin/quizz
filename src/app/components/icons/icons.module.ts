@@ -5,13 +5,15 @@ import { EditIconComponent } from "./edit/edit-icon.component";
 import { HumburgerIconComponent } from "./humburger/humburger-icon.component";
 import { MoonIconComponent } from "./moon/moon-icon.component";
 import { SunIconComponent } from "./sun/sun-icon.component";
+import { HeartIconComponent } from './heart/heart-icon.component';
 
 const COMPONENTS = [
     CalendarIconComponent,
     EditIconComponent,
     HumburgerIconComponent,
     MoonIconComponent,
-    SunIconComponent
+    SunIconComponent,
+    HeartIconComponent
 ];
 
 @NgModule({

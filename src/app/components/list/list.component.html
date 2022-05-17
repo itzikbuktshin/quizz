@@ -1,0 +1,21 @@
+<div class="list">
+    <nb-card>
+        <nb-card-header>
+            {{title}}
+        </nb-card-header>
+
+        <div class="list__items">
+            <nb-list>
+                <ng-template #defaultListItemTemplate let-listItem="item">
+                    <span>{{listItem}}</span>
+                </ng-template>
+    
+                <nb-list-item *ngFor="let item of list">
+                    <ng-container
+                        *ngTemplateOutlet="itemTemplate ? itemTemplate: defaultListItemTemplate; context: {item:item}">
+                    </ng-container>
+                </nb-list-item>
+            </nb-list>
+        </div>
+    </nb-card>
+</div>

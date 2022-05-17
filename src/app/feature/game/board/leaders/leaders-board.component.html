@@ -1,0 +1,19 @@
+<div class="leaders">
+    <div>
+        <div (click)="gameReset()" class="text-center my-1" routerLink="/">
+            <img src="assets/images/logo.png">
+        </div>
+    </div>
+    
+    <div class="leaders__list">
+        <quizz-list [itemTemplate]="leaderTemplate" [list]="leaders$ | async | sort : 'score'" title="LEADER BOARD">
+        </quizz-list>
+    </div>
+</div>
+
+<ng-template let-leader="item" #leaderTemplate>
+    <div class="w-100 d-flex align-items-center justify-content-between">
+        <div>{{leader.name}}</div>
+        <div>{{leader.score}}</div>
+    </div>
+</ng-template>

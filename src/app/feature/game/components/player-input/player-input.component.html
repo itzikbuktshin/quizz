@@ -1,0 +1,11 @@
+<div class="playerInput">
+    <quizz-text-input [formControl]="formControl" placeholder="Player name" label="Player name">
+        <span error *ngIf="formControl?.errors?.['required']">Player name is required</span>
+    </quizz-text-input>
+
+    <div class="playerInput__startButton">
+        <quizz-button (click)="savePlayer()">
+            Let's Play
+        </quizz-button>
+    </div>
+</div>

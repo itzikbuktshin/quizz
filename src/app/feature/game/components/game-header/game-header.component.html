@@ -1,0 +1,14 @@
+<div class="gameHeader h-100">
+    <header class="h-100">
+        <div class="h-100 d-flex w-100 justify-content-between p-2 align-items-center">
+            <div class="d-flex align-items-center">
+                <span class="mx-1">LIVES</span>
+                <div class="gameHeader__liveIcon" *ngFor="let live of Array(lives).fill(0)">
+                    <quizz-heart-icon></quizz-heart-icon>
+                </div>
+            </div>
+            <div class="mx-1">Question {{(currentQuestion ?? 0) + 1}}/10</div>
+            <div><span class="mx-1">POINTS {{points}}</span></div>
+        </div>
+    </header>
+</div>

@@ -3,6 +3,7 @@
             class="w-100"
             matRipple
             size="medium"
+            [disabled]="disabled"
             (click)="config?.click()"
             [shape]="config?.shape || shape"
             [status]="config?.color || color">
