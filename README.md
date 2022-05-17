@@ -2,6 +2,8 @@
 
 Quizz is an Angular 12 Trivia game project.
 
+Demo App: https://itzikbuktshin.github.io/quizz/
+
 Game flow:
   1. Palyer enters his name in the main screen.
   2. The game will presnt 10 question with 4 options to answer.
