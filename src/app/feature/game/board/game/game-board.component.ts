@@ -30,7 +30,13 @@ export class GameBoardComponent implements OnInit, OnDestroy {
   }
 
   answerQuestion(answer: number) {
+    clearInterval(this._interval);
     this.game.answerQuestion(answer)
+  }
+
+
+  loadNextQuestion(){
+    this.game.loadNextQuestion();
   }
 
   ngOnDestroy(): void {

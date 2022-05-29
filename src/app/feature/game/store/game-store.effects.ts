@@ -36,7 +36,7 @@ export class GameEffects {
     ));
 
     loadNextQuestion$ = createEffect(() => this.actions$.pipe(
-        ofType(...[gameActions.answerQuestionError, gameActions.answerQuestionSuccess]),
+        ofType(gameActions.loadNextQuestion),
         withLatestFrom(this.store.pipe(select(fromGame.selectCountAnswers))),
         map(([action, { total, incorrect }]) => {
             if (total === 10 || incorrect === 3) {

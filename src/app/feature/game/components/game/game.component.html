@@ -8,14 +8,15 @@
 
         <div class="game__body">
             <div class="game__answer" *ngFor="let answer of question?.answers; let i=index">
-                <div class="game__answerWrapper" (click)="selecteAnswer(i)"
-                    [class.game__answerWrapper--selected]="selectedAnswer === i">
+                <div [class.game__answerWrapper--correct]="incorrectAnswer === false && selectedAnswer === i"
+                    [class.game__answerWrapper--incorrect]="incorrectAnswer === true && selectedAnswer === i"
+                    class="game__answerWrapper" (click)="selecteAnswer(i)">
                     <span [innerHTML]="answer"></span>
                 </div>
             </div>
         </div>
 
-        <div class="game__actions" (click)="answerQuestion()">
+        <div class="game__actions" (click)="nextQuestion()">
             <quizz-button [disabled]="selectedAnswer === null">Ok</quizz-button>
         </div>
     </ng-container>

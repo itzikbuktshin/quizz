@@ -38,6 +38,10 @@ export class GameService {
     this.store.dispatch(gameActions.loadQuestion());
   }
 
+  loadNextQuestion() {
+    this.store.dispatch(gameActions.loadNextQuestion());
+  }
+
   answerQuestion(answer: number) {
     this.store.dispatch(gameActions.answerQuestion({ answer }));
   }

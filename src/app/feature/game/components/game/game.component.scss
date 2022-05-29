@@ -41,10 +41,19 @@
             justify-content: center;
 
             &--selected {
-                border-color: black;
                 background-color: white;
             }
+
+            &--correct {
+                border-color: var(--quizz-success-color) !important;
+    
+            }
+    
+            &--incorrect {
+                border-color: var(--quizz-warn-color) !important;
+            }
         }
+
     }
 
     &__actions {

@@ -5,6 +5,7 @@ const prefix = '[Game Action]';
 
 export const savePlayer = createAction(`${prefix} Save player`, props<{ name: string }>());
 export const loadQuestion = createAction(`${prefix} Load question`);
+export const loadNextQuestion = createAction(`${prefix} Load next question`);
 export const loadQuestionSuccess = createAction(`${prefix} Load question success`, props<{ question: Question }>());
 export const loadQuestionError = createAction(`${prefix} Load question error`);
 

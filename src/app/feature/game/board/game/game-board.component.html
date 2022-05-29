@@ -9,7 +9,7 @@
             </div>
             <div class="gameBoard__game">
                 <quizz-game [currentQuestion]="totalAnswers$ | async" [timeLeft]="timeLeft"
-                    (onAnswer)="answerQuestion($event)" [question]="question$ | async">
+                    (onAnswer)="answerQuestion($event)" (onNext)="loadNextQuestion()" [question]="question$ | async">
                 </quizz-game>
             </div>
         </div>
