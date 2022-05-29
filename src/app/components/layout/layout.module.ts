@@ -7,7 +7,6 @@ import { ToggleInputModule } from "../inputs/toggle/toggle-input.module";
 import { MenuComponent } from "./menu/menu.component";
 import { BlankPageLayoutComponent } from './page/blank/blank-page-layout.component';
 import { MainPageLayoutComponent } from './page/main/main-page-layout.component';
-import { BreadcrumbModule } from "../breadcrumb/breadcrumb.module";
 
 const COMPONENTS = [
     MenuComponent,
@@ -25,8 +24,7 @@ const COMPONENTS = [
         NbSidebarModule.forRoot(),
         NbThemeModule.forRoot({ name: 'default' }),
         NbMenuModule.forRoot(),
-        NbEvaIconsModule,
-        BreadcrumbModule
+        NbEvaIconsModule
     ],
     exports: [
         ...COMPONENTS

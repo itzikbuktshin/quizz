@@ -9,14 +9,7 @@ import { Component, Input } from '@angular/core';
         </div>
     </nb-layout-header>
 
-    <nb-sidebar [responsive]="true" left tag="left" *ngIf="withMenu">
-        <ng-content select="[menu]"></ng-content>
-    </nb-sidebar>
-
     <nb-layout-column>
-        <div class="my-3">
-          <quizz-breadcrumb></quizz-breadcrumb>
-        </div>
         <ng-content select="[content]"></ng-content>
     </nb-layout-column>
   </nb-layout>`
