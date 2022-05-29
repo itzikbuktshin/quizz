@@ -19,12 +19,12 @@ export class GameEffects {
 
     loadQuestion$ = createEffect(() => this.actions$.pipe(
         ofType(gameActions.loadQuestion),
-        withLatestFrom(this.store.pipe(select(fromGame.selectQuestion))),
-        switchMap(([action, currentQuestion]) => {
+        withLatestFrom(this.store.pipe(select(fromGame.selectPreviousQuestions))),
+        switchMap(([action, previousQuestions]) => {
             return this.gameApi.loadQuestion()
                 .pipe(
                     map(newQuestion => {
-                        if (newQuestion.question === currentQuestion?.question) {
+                        if (previousQuestions.includes(newQuestion)) {
                             throw newQuestion;
                         }
                         return newQuestion;

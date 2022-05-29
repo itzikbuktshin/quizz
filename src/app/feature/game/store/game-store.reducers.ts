@@ -6,7 +6,7 @@ import * as appAction from './game-store.actions';
 
 export interface GameState {
     playerName: string | null;
-    previousQuestion: Question | null;
+    previousQuestions: Question[];
     currentQuestion: Question | null;
     correct: number;
     incorrect: number;
@@ -20,7 +20,7 @@ export class GameReducers {
         leaders: [],
         playerName: null,
         currentQuestion: null,
-        previousQuestion: null,
+        previousQuestions: [],
         correct: 0,
         lives: 3,
         incorrect: 0
@@ -32,7 +32,11 @@ export class GameReducers {
                 return { ...state, ...{ playerName: name } }
             }),
             on(appAction.loadQuestionSuccess, (state, { question }) => {
-                return { ...state, ...{ currentQuestion: question } }
+                const previousQuestions: Question[] = [
+                    ...state.previousQuestions,
+                    question
+                ]
+                return { ...state, ...{ currentQuestion: question, previousQuestions } }
             }),
             on(appAction.answerQuestionSuccess, (state) => {
                 const correct = state.correct + 1;

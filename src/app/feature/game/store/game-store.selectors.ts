@@ -18,6 +18,11 @@ export const selectQuestion = createSelector(
     (state) => state.currentQuestion
 );
 
+export const selectPreviousQuestions = createSelector(
+    selectGame,
+    (state) => state.previousQuestions
+);
+
 export const selectLives = createSelector(
     selectGame,
     (state) => state.lives
